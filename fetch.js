@@ -13,11 +13,12 @@ fetch(endPoint, options)
             let text = document.createElement("h2");
             let addText = document.createTextNode(results.name);
             text.appendChild(addText);
+            let li = document.createElement("li");
             let img = document.createElement("img");
             img.setAttribute("src", results.flag);
             let display = document.getElementById("display");
-
-            display.appendChild(img);
-            display.appendChild(text);
+            li.appendChild(img);
+            li.appendChild(text);
+            display.appendChild(li);
         });
     });
